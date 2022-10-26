@@ -1,0 +1,24 @@
+.search {
+  width: 100%;
+  background-color: #5384e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.search input {
+  background-color: #5384e0;
+  color: white;
+  padding-left: 20px;
+}
+
+.search input::placeholder {
+  padding-left: 10px;
+  color: white;
+}
+
+.search i {
+  color: white;
+}

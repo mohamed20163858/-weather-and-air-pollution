@@ -5,7 +5,7 @@ import { fetchAllMissions } from './redux/missions/missions';
 import { fetchAllRockets } from './redux/rockets/rockets';
 import Navbar from './components/Navbar';
 import MyProfile from './components/My profile';
-import Rockets from './components/Rockets';
+import Cities from './components/Cities';
 import Missions from './components/Missions';
 
 const App = () => {
@@ -19,7 +19,7 @@ const App = () => {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Rockets />} />
+        <Route path="/" element={<Cities />} />
         <Route path="/missions" element={<Missions />} />
         <Route path="/my-profile" element={<MyProfile />} />
       </Routes>
