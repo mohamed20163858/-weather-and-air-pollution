@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<tr
+  id="EE86F74"
+>
+  <td>
+    Commercial Resupply Services
+  </td>
+  <td>
+    <p>
+      discription
+    </p>
+  </td>
+  <td>
+    <p
+      className="badge-2"
+    >
+      Active Member
+    </p>
+  </td>
+  <td>
+    <button
+      className="reserved"
+      onClick={[Function]}
+      type="submit"
+    >
+      Leave Mission
+    </button>
+  </td>
+</tr>
+`;

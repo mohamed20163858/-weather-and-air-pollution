@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="rocket-card"
+  id={1}
+>
+  <img
+    alt="rocket"
+    src="https://imgur.com/DaCfMsj.jpg"
+    width="200"
+  />
+  <div
+    className="card-info"
+  >
+    <h2>
+      Falcon 1
+    </h2>
+    <p>
+      <span
+        className="badge"
+        data-testid="rocket-reserved"
+      >
+        Reserved
+      </span>
+      discription
+    </p>
+    <button
+      className="reserved"
+      onClick={[Function]}
+      type="submit"
+    >
+      Cancel Reservation
+    </button>
+  </div>
+</div>
+`;

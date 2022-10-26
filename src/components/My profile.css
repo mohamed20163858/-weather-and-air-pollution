@@ -1,0 +1,25 @@
+.profile-table {
+  border: 1px solid #dee2e6;
+  border-radius: 3px;
+  text-align: start;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.profile-table td {
+  border: 1px solid #dee2e6;
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.profile-body {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+}
+
+.profile-body > div {
+  width: 50%;
+}

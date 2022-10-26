@@ -1,0 +1,43 @@
+.rocket-card {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.card-info h2 {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.card-info p {
+  line-height: 1.4;
+}
+
+.card-info .badge {
+  background-color: #18a2b8;
+  color: white;
+  margin-right: 10px;
+  padding: 2px;
+  border-radius: 3px;
+}
+
+.card-info .unreserved {
+  background-color: #007bff;
+  border-radius: 3px;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}
+
+.card-info .reserved {
+  background-color: white;
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 16px;
+  color: #adb2b7;
+  border-color: #adb2b7;
+  cursor: pointer;
+}

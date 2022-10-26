@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="profile-body"
+  data-testid="momo-id"
+>
+  <div
+    className="my-missions"
+  >
+    <h2>
+      My Missions
+    </h2>
+    <table
+      className="profile-table"
+    >
+      <thead />
+      <tbody />
+      <tfoot />
+    </table>
+  </div>
+  <div
+    className="my-rockets"
+  >
+    <h2>
+      My Rockets
+    </h2>
+    <table
+      className="profile-table"
+    >
+      <thead />
+      <tbody />
+      <tfoot />
+    </table>
+  </div>
+</div>
+`;
