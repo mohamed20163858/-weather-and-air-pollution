@@ -17,7 +17,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Cities />} />
-        <Route path="/:id" element={<City />} />
+        <Route path="/:country/:city" element={<City />} />
       </Routes>
     </Router>
   );

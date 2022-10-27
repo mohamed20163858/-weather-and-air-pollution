@@ -25,7 +25,7 @@ const Cities = () => {
   for (let i = 0; i < infoState.length; i += 1) {
     infoUI.push(<CityCard
       countryName={infoState[i].name}
-      captialName={infoState[i].capital}
+      cityName={infoState[i].capital}
       capitalISO2={infoState[i].iso2}
       capitalISO3={infoState[i].iso3}
       id={i}
