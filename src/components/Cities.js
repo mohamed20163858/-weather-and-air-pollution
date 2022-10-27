@@ -1,22 +1,26 @@
 import { useSelector } from 'react-redux';
-import RocketCard from './rocketCard';
+import CityCard from './cityCard';
 import './Cities.css';
 
 const Cities = () => {
   const infoUI = [];
-  const infoState = useSelector((state) => state.rocketInfo);
+  const infoState = useSelector((state) => state.citiesInfo);
+  const limit = 100;
   for (let i = 0; i < infoState.length; i += 1) {
-    infoUI.push(<RocketCard
-      rocketId={infoState[i].id}
-      rocketName={infoState[i].rocket_name}
-      rocketDescription={infoState[i].description}
-      rocketImage={infoState[i].flickr_images[0]}
-      reserved={Boolean(infoState[i].reserved)}
-      key={`city-${infoState[i].id}`}
+    infoUI.push(<CityCard
+      countryName={infoState[i].name}
+      captialName={infoState[i].capital}
+      capitalISO2={infoState[i].iso2}
+      capitalISO3={infoState[i].iso3}
+      id={i}
+      key={`city-${i}`}
     />);
+    if (i === limit) {
+      break;
+    }
   }
   return (
-    <div data-testid="momo-id">
+    <div className="cards" data-testid="momo-id">
       <div className="search">
         <i className="fa-solid fa-magnifying-glass" />
         <input type="text" placeholder="search" />

@@ -1,4 +1,4 @@
-import rocketsReducer, { reserveRocket, cancelRocket } from './rockets';
+import rocketsReducer, { reserveRocket, cancelRocket } from './cities';
 
 test('test reserveRocket functionality', () => {
   // ARRANGE

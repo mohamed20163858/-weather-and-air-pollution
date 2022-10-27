@@ -22,3 +22,24 @@
 .search i {
   color: white;
 }
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.city-card {
+  width: 50%;
+  border: none;
+  text-decoration: none;
+}
+
+.city-card:nth-child(2n+1) {
+  background-color: #4066ad;
+  color: white;
+}
+
+.city-card:nth-child(2n) {
+  background-color: #3e61a3;
+  color: white;
+}

@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import spacexTravelesHubAPIMethods from '../../spacexAPI/methods';
+import spacexTravelesHubAPIMethods from '../../citiesAPI/methods';
 
 const JOIN = 'spacex-traveles-hub/src/redux/missions/JOIN';
 const GET = 'spacex-traveles-hub/src/redux/missions/GET';
