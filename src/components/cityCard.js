@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 import './rocketCards.css';
 
-const RocketCard = (props) => {
+const CityCard = (props) => {
   const {
     id, countryName, captialName, capitalISO2, capitalISO3,
   } = props;
@@ -19,11 +19,11 @@ const RocketCard = (props) => {
   );
 };
 
-RocketCard.propTypes = {
+CityCard.propTypes = {
   id: PropTypes.number.isRequired,
   countryName: PropTypes.string.isRequired,
   captialName: PropTypes.string.isRequired,
   capitalISO2: PropTypes.string.isRequired,
   capitalISO3: PropTypes.string.isRequired,
 };
-export default RocketCard;
+export default CityCard;

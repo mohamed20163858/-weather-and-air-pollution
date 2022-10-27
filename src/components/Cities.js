@@ -1,11 +1,27 @@
 import { useSelector } from 'react-redux';
+import { useState } from 'react';
 import CityCard from './cityCard';
 import './Cities.css';
 
 const Cities = () => {
   const infoUI = [];
-  const infoState = useSelector((state) => state.citiesInfo);
-  const limit = 100;
+  const infoStore = useSelector((store) => store.citiesInfo);
+  const [infoState, setInfoState] = useState([]);
+  const limit = 101;
+  const writingAction = (e) => {
+    let shownData;
+    if (e.target.value !== '') {
+      shownData = infoStore.filter(
+        (element) => element.name.trim().toLowerCase().startsWith(e.target.value.toLowerCase()),
+      );
+    } else {
+      shownData = infoStore;
+    }
+    setInfoState(shownData);
+  };
+  if (infoState.length === 0) {
+    infoState.push(...infoStore);
+  }
   for (let i = 0; i < infoState.length; i += 1) {
     infoUI.push(<CityCard
       countryName={infoState[i].name}
@@ -19,11 +35,12 @@ const Cities = () => {
       break;
     }
   }
+
   return (
     <div className="cards" data-testid="momo-id">
       <div className="search">
         <i className="fa-solid fa-magnifying-glass" />
-        <input type="text" placeholder="search" />
+        <input type="text" placeholder="search" onKeyUp={writingAction} />
       </div>
       {infoUI}
     </div>
