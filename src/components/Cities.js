@@ -7,6 +7,7 @@ const Cities = () => {
   const infoUI = [];
   const infoStore = useSelector((store) => store.citiesInfo);
   const [infoState, setInfoState] = useState([]);
+  const [flag, setFlag] = useState(true);
   const limit = 101;
   const writingAction = (e) => {
     let shownData;
@@ -14,12 +15,14 @@ const Cities = () => {
       shownData = infoStore.filter(
         (element) => element.name.trim().toLowerCase().startsWith(e.target.value.toLowerCase()),
       );
+      setFlag(false);
     } else {
       shownData = infoStore;
+      setFlag(true);
     }
     setInfoState(shownData);
   };
-  if (infoState.length === 0) {
+  if (infoState.length === 0 && flag) {
     infoState.push(...infoStore);
   }
   for (let i = 0; i < infoState.length; i += 1) {
@@ -35,7 +38,9 @@ const Cities = () => {
       break;
     }
   }
-
+  if (infoUI.length === 0) {
+    infoUI.push(<p key="unvalid-data">there is no country has this name please enter a valid country name</p>);
+  }
   return (
     <div className="cards" data-testid="momo-id">
       <div className="search">
