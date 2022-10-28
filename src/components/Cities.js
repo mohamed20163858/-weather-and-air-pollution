@@ -17,7 +17,7 @@ const Cities = () => {
         (element) => element.country.trim().toLowerCase().startsWith(e.target.value.toLowerCase()),
       );
       setFlag(false);
-      if (e.code === 'Enter') {
+      if (e.keyCode === 13) {
         shownData = allCitiesStore.filter(
           (element) => element.country.trim().toLowerCase().startsWith(
             e.target.value.toLowerCase(),
