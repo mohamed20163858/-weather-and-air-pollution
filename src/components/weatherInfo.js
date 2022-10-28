@@ -62,25 +62,42 @@ const WeatherInfo = () => {
   }
   return (
     <>
-      <p>{description}</p>
-      <p>{humidity}</p>
-      <p>{temp}</p>
-      <p>{feelsLike}</p>
-      <p>{cloudness}</p>
-      <p>{windSpeed}</p>
-      <p>{windDegree}</p>
-      <p>{windGustSpeed}</p>
-
-      <p>{pollutionLevel}</p>
-      <p>{pollutionIndex}</p>
-      <p>{co}</p>
-      <p>{no}</p>
-      <p>{no2}</p>
-      <p>{o3}</p>
-      <p>{so2}</p>
-      <p>{nh3}</p>
-      <p>{pm2half}</p>
-      <p>{pm10}</p>
+      <div className="weather-analytics">
+        <h2>Current Weather Analytics</h2>
+        <p>{`Domaint weather condition: ${description}`}</p>
+        <p>{`Humidity: ${humidity} %`}</p>
+        <p>
+          {`Temperature: ${temp}`}
+          <sup>o</sup>
+          C
+        </p>
+        <p>
+          {`Feels like: ${feelsLike}`}
+          <sup>o</sup>
+          C
+        </p>
+        <p>{`Cloudness: ${cloudness} %`}</p>
+        <p>{`Wind speed: ${windSpeed} m/s`}</p>
+        <p>
+          {`Wind degree: ${windDegree}`}
+          <sup>o</sup>
+        </p>
+        <p>{`Wind gust speed: ${windGustSpeed} m/s`}</p>
+      </div>
+      <div className="air-pollution-analytics">
+        <h2>Current Air Pollution Analytics</h2>
+        <p>{`Pollution level: ${pollutionLevel}`}</p>
+        <p>{`Pollution index: ${pollutionIndex}`}</p>
+        <h3>Concentartions</h3>
+        <p>{`Carbon monoxide (CO): ${co} ug/m3`}</p>
+        <p>{`Nitrogen monoxide (NO): ${no} ug/m3`}</p>
+        <p>{`Nitrogen dioxide (NO2): ${no2} ug/m3`}</p>
+        <p>{`Ozone (O3): ${o3} ug/m3`}</p>
+        <p>{`Sulphur dioxide (SO2): ${so2} ug/m3`}</p>
+        <p>{`Ammonia (NH3): ${nh3} ug/m3`}</p>
+        <p>{`Airbrone particles (PM2.5): ${pm2half} ug/m3`}</p>
+        <p>{`Airbrone particles (PM10): ${pm10} ug/m3`}</p>
+      </div>
     </>
   );
 };

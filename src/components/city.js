@@ -33,16 +33,10 @@ const City = () => {
   return (
     <div className="city-info">
       <div className="flag">
-        <p>Country Flag</p>
+        <h1>Country Flag</h1>
         <img src={imgSrc} alt="flag" width="40" />
       </div>
-      <div className="city-postitons-details">
-        <p>{data ? data.countryName : ''}</p>
-        <p>{data ? data.cityName : ''}</p>
-        <p>{data ? data.cityISO2 : ''}</p>
-        <p>{data ? data.cityISO3 : ''}</p>
-      </div>
-      <CityInfo />
+      <CityInfo country={data.countryName} city={data.cityName} />
     </div>
   );
 };
