@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
 import { configureStore } from '@reduxjs/toolkit';
-import citiesReducer, { savedStoreReducer } from './cities/cities';
+import citiesReducer, { savedStoreReducer, allCitiesReducer, allFlagsReducer } from './cities/cities';
 
 const rootReducer = combineReducers(
   {
     citiesInfo: citiesReducer,
+    allCitiesInfo: allCitiesReducer,
+    allFlagsInfo: allFlagsReducer,
     savedStoreInfo: savedStoreReducer,
   },
 );

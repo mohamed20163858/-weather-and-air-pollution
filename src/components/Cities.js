@@ -6,6 +6,7 @@ import './Cities.css';
 const Cities = () => {
   const infoUI = [];
   const infoStore = useSelector((store) => store.citiesInfo);
+  const allCitiesStore = useSelector((store) => store.allCitiesInfo);
   const [infoState, setInfoState] = useState([]);
   const [flag, setFlag] = useState(true);
   const limit = 101;
@@ -13,9 +14,16 @@ const Cities = () => {
     let shownData;
     if (e.target.value !== '') {
       shownData = infoStore.filter(
-        (element) => element.name.trim().toLowerCase().startsWith(e.target.value.toLowerCase()),
+        (element) => element.country.trim().toLowerCase().startsWith(e.target.value.toLowerCase()),
       );
       setFlag(false);
+      if (e.code === 'Enter') {
+        shownData = allCitiesStore.filter(
+          (element) => element.country.trim().toLowerCase().startsWith(
+            e.target.value.toLowerCase(),
+          ),
+        );
+      }
     } else {
       shownData = infoStore;
       setFlag(true);
@@ -26,14 +34,19 @@ const Cities = () => {
     infoState.push(...infoStore);
   }
   for (let i = 0; i < infoState.length; i += 1) {
-    infoUI.push(<CityCard
-      countryName={infoState[i].name}
-      cityName={infoState[i].capital}
-      capitalISO2={infoState[i].iso2}
-      capitalISO3={infoState[i].iso3}
-      id={i}
-      key={`city-${i}`}
-    />);
+    for (let j = 0; j < infoState[i].cities.length; j += 1) {
+      infoUI.push(<CityCard
+        countryName={infoState[i].country}
+        cityName={infoState[i].cities[j]}
+        capitalISO2={infoState[i].iso2}
+        capitalISO3={infoState[i].iso3}
+        id={i}
+        key={`${infoState[i].country}-${infoState[i].cities[j]}`}
+      />);
+      if (j === limit) {
+        break;
+      }
+    }
     if (i === limit) {
       break;
     }
