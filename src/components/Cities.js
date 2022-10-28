@@ -38,8 +38,8 @@ const Cities = () => {
       infoUI.push(<CityCard
         countryName={infoState[i].country}
         cityName={infoState[i].cities[j]}
-        capitalISO2={infoState[i].iso2}
-        capitalISO3={infoState[i].iso3}
+        cityISO2={infoState[i].iso2}
+        cityISO3={infoState[i].iso3}
         id={i}
         key={`${infoState[i].country}-${infoState[i].cities[j]}`}
       />);
