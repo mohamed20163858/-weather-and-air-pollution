@@ -26,7 +26,7 @@ body {
 .weather-analytics p,
 .air-pollution-analytics p {
   width: 50%;
-  padding: 20px;
+  padding: 0 10vw;
   box-sizing: border-box;
 }
 
@@ -43,4 +43,12 @@ body {
 
 .air-pollution-analytics {
   background-color: #4164a8;
+}
+
+@media (min-width: 768px) {
+  .city-positions-details p,
+  .weather-analytics p,
+  .air-pollution-analytics p {
+    padding-left: 20%;
+  }
 }
