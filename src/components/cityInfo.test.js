@@ -1,23 +1,34 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import store from '../redux/configureStore';
 import '@testing-library/jest-dom';
-import Cities from './Cities';
+import CityInfo from './cityInfo';
 
-function TestCities() {
+function TestCityInfo() {
   return (
     <Provider store={store}>
       <Router>
-        <Cities />
+        <CityInfo country="Egypt" city="Cairo" />
       </Router>
     </Provider>
   );
 }
 it('renders correctly', () => {
   const tree = renderer
-    .create(<TestCities />)
+    .create(<TestCityInfo />)
     .toJSON();
   expect(tree).toMatchSnapshot();
+});
+it('test the existence of country field', () => {
+  // ARRANGE
+  render(<TestCityInfo />);
+
+  // ACT
+  // Arrange
+  const result = screen.getByText('Country: Egypt');
+  // ASSERT
+  expect(result).toBeInTheDocument();
 });

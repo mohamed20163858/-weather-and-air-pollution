@@ -26,7 +26,7 @@ const CityCard = (props) => {
   };
 
   return (
-    <NavLink className={`city-card ${color}`} onClick={saveCardInfo} to={`/${cityISO2}/${cityName}`}>
+    <NavLink className={`city-card ${color}`} data-testid="check-id" onClick={saveCardInfo} to={`/${cityISO2}/${cityName}`}>
       <div id={id}>
         <img src={imgSrc} alt={`${countryName} flag`} />
         <p>{`Country: ${countryName}`}</p>

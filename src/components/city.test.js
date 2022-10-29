@@ -1,23 +1,34 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
+import { render, screen } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import store from '../redux/configureStore';
 import '@testing-library/jest-dom';
-import Cities from './Cities';
+import City from './city';
 
-function TestCities() {
+function TestCity() {
   return (
     <Provider store={store}>
       <Router>
-        <Cities />
+        <City />
       </Router>
     </Provider>
   );
 }
 it('renders correctly', () => {
   const tree = renderer
-    .create(<TestCities />)
+    .create(<TestCity />)
     .toJSON();
   expect(tree).toMatchSnapshot();
+});
+it('test the existence of page', () => {
+// ARRANGE
+  render(<TestCity />);
+
+  // ACT
+  // Arrange
+  const result = screen.getByText('Country Flag');
+  // ASSERT
+  expect(result).toBeInTheDocument();
 });

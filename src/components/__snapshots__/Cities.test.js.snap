@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="cards"
+  data-testid="momo-id"
+>
+  <div
+    className="search"
+  >
+    <i
+      className="fa-solid fa-magnifying-glass"
+    />
+    <input
+      onKeyUp={[Function]}
+      placeholder="search using country, city"
+      type="text"
+    />
+  </div>
+  <p>
+    there is no country has this name please enter a valid country name
+  </p>
+</div>
+`;

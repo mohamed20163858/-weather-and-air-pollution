@@ -32,7 +32,7 @@ const City = () => {
     (element) => element.name.trim().startsWith(data.countryName),
   ).map((element) => element.flag);
   let [imgSrc] = flagInfo;
-  if (data.countryName === 'Afghanistan') {
+  if (data !== undefined && data.countryName === 'Afghanistan') {
     imgSrc = 'https://upload.wikimedia.org/wikipedia/commons/7/7a/Flag_of_Afghanistan_%282004%E2%80%932021%29.svg';
   }
   if (imgSrc === undefined) {
@@ -44,7 +44,7 @@ const City = () => {
         <h1>Country Flag</h1>
         <img src={imgSrc} alt="flag" width="40" />
       </div>
-      <CityInfo country={data.countryName} city={data.cityName} />
+      <CityInfo country={data !== undefined ? data.countryName : ''} city={data !== undefined ? data.cityName : ''} />
     </div>
   );
 };
