@@ -1,0 +1,46 @@
+body {
+  background-color: #6897ef;
+  margin: 0;
+}
+
+.flag {
+  text-align: center;
+}
+
+.flag h1 {
+  font-size: 20px;
+}
+
+.flag img {
+  width: 100px;
+}
+
+.city-positions-details,
+.weather-analytics,
+.air-pollution-analytics {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.city-positions-details p,
+.weather-analytics p,
+.air-pollution-analytics p {
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.weather-analytics h2,
+.air-pollution-analytics h2,
+.air-pollution-analytics h3 {
+  width: 100%;
+  text-align: center;
+}
+
+.weather-analytics {
+  background-color: #4369b0;
+}
+
+.air-pollution-analytics {
+  background-color: #4164a8;
+}

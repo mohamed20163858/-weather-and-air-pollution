@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchCityGeocoding } from '../redux/cities/cities';
 import CityInfo from './cityInfo';
+import altImg from './images/not_available.jpg';
+import './city.css';
 
 const City = () => {
   const infoState = useSelector((state) => state.savedStoreInfo);
@@ -29,7 +31,13 @@ const City = () => {
   const flagInfo = allFlagsInfo.filter(
     (element) => element.name.trim().startsWith(data.countryName),
   ).map((element) => element.flag);
-  const [imgSrc] = flagInfo;
+  let [imgSrc] = flagInfo;
+  if (data.countryName === 'Afghanistan') {
+    imgSrc = 'https://upload.wikimedia.org/wikipedia/commons/7/7a/Flag_of_Afghanistan_%282004%E2%80%932021%29.svg';
+  }
+  if (imgSrc === undefined) {
+    imgSrc = altImg;
+  }
   return (
     <div className="city-info">
       <div className="flag">

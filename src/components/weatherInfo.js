@@ -64,7 +64,7 @@ const WeatherInfo = () => {
     <>
       <div className="weather-analytics">
         <h2>Current Weather Analytics</h2>
-        <p>{`Domaint weather condition: ${description}`}</p>
+        <p>{`Weather condition: ${description}`}</p>
         <p>{`Humidity: ${humidity} %`}</p>
         <p>
           {`Temperature: ${temp}`}

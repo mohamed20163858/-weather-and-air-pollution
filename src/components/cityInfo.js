@@ -17,15 +17,15 @@ const CityInfo = (props) => {
 
   return (
     <>
-      <div className="city-postitons-details">
+      <div className="city-positions-details">
         <p>{`Country: ${country}`}</p>
         <p>{`City: ${city}`}</p>
         <p>
-          {`Latitude: ${lat}`}
+          {`Latitude: ${Math.round(lat * 100) / 100}`}
           <sup>o</sup>
         </p>
         <p>
-          {`Longitude: ${lon}`}
+          {`Longitude: ${Math.round(lon * 100) / 100}`}
           <sup>o</sup>
         </p>
       </div>
