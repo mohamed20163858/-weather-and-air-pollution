@@ -12,10 +12,10 @@
   background-color: #5384e0;
   color: white;
   padding-left: 20px;
+  width: 50%;
 }
 
 .search input::placeholder {
-  padding-left: 10px;
   color: white;
 }
 
@@ -34,12 +34,32 @@
   text-decoration: none;
 }
 
-.city-card:nth-child(2n+1) {
-  background-color: #4066ad;
+.city-card div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.city-card div img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.city-card div p {
+  margin: 0;
+}
+
+.bright {
+  background-color: #4369b0;
   color: white;
 }
 
-.city-card:nth-child(2n) {
-  background-color: #3e61a3;
+.dark {
+  background-color: #4164a8;
   color: white;
 }

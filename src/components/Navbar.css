@@ -1,6 +1,6 @@
 * {
   font-family: 'Gill Sans', sans-serif;
-  font-size: 22px;
+  font-size: 18px;
   padding: 0;
 }
 
@@ -19,4 +19,8 @@
 
 .left i:first-of-type {
   margin-right: 20px;
+}
+
+.fa-magnifying-glass {
+  margin-right: 10px;
 }
