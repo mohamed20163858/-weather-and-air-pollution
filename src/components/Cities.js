@@ -13,16 +13,29 @@ const Cities = () => {
   const writingAction = (e) => {
     let shownData;
     if (e.target.value !== '') {
+      const arr = e.target.value.toLowerCase();
+      const country = arr.split(',')[0];
+      const city = arr.split(',')[1];
       shownData = infoStore.filter(
-        (element) => element.country.trim().toLowerCase().startsWith(e.target.value.toLowerCase()),
+        (element) => element.country.trim().toLowerCase().startsWith(country),
       );
       setFlag(false);
       if (e.keyCode === 13) {
-        shownData = allCitiesStore.filter(
-          (element) => element.country.trim().toLowerCase().startsWith(
-            e.target.value.toLowerCase(),
-          ),
+        const savedData = allCitiesStore.filter(
+          (element) => element.country.trim().toLowerCase().startsWith(country),
         );
+        if (city !== undefined && city !== '') {
+          shownData = savedData.map((element) => (
+            {
+              country: element.country,
+              cities: element.cities.filter(
+                (element) => element.trim().toLowerCase().startsWith(city.trim()),
+              ),
+            }
+          ));
+        } else {
+          shownData = savedData;
+        }
       }
     } else {
       shownData = infoStore;
@@ -58,7 +71,7 @@ const Cities = () => {
     <div className="cards" data-testid="momo-id">
       <div className="search">
         <i className="fa-solid fa-magnifying-glass" />
-        <input type="text" placeholder="search" onKeyUp={writingAction} />
+        <input type="text" placeholder="search using country, city" onKeyUp={writingAction} />
       </div>
       {infoUI}
     </div>
