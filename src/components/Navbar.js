@@ -3,7 +3,7 @@ import './Navbar.css';
 
 const Navbar = () => (
   <div className="navbar">
-    <NavLink to="/" className="logo">
+    <NavLink to="/" className="logo" data-testid="nav-test-id">
       <i className="fa-solid fa-house-user" />
     </NavLink>
     <p>Weather and Air Pollution</p>

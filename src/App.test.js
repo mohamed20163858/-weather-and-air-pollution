@@ -20,37 +20,14 @@ it('renders correctly', () => {
     .toJSON();
   expect(tree).toMatchSnapshot();
 });
-test('simulate navigating  through Rockets link ', () => {
+test('simulate navigating  through details link ', () => {
   // ARRANGE
   render(<TestApp />);
 
   // ACT
-  userEvent.click(screen.getByText('Rockets'));
+  userEvent.click(screen.getByTestId('nav-test-id'));
   // Arrange
-  const result = screen.getByTestId('momo-id');
-  // ASSERT
-  expect(result).toBeInTheDocument();
-});
-
-test('simulate navigating  through Missions link ', () => {
-  // ARRANGE
-  render(<TestApp />);
-
-  // ACT
-  userEvent.click(screen.getByText('Missions'));
-  // Arrange
-  const result = screen.getByTestId('momo-id');
-  // ASSERT
-  expect(result).toBeInTheDocument();
-});
-test('simulate navigating  through My Profile link ', () => {
-  // ARRANGE
-  render(<TestApp />);
-
-  // ACT
-  userEvent.click(screen.getByText('My Profile'));
-  // Arrange
-  const result = screen.getByTestId('momo-id');
+  const result = screen.getByText('there is no country has this name please enter a valid country name');
   // ASSERT
   expect(result).toBeInTheDocument();
 });

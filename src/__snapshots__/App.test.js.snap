@@ -1,63 +1,54 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div
-  className="outer"
->
+Array [
   <div
-    className="inner-1"
+    className="navbar"
   >
     <a
-      className="logo"
-      href="/my-profile"
+      aria-current="page"
+      className="logo active"
+      data-testid="nav-test-id"
+      href="/"
       onClick={[Function]}
     >
-      <img
-        alt="logo"
-        height="40"
-        src="logo.png"
-        width="40"
+      <i
+        className="fa-solid fa-house-user"
       />
-      <p>
-        Space Travelers'Hub
-      </p>
     </a>
-  </div>
-  <div
-    className="inner-2"
-  >
-    <ul>
-      <li>
-        <a
-          className=""
-          href="/rockets"
-          onClick={[Function]}
-        >
-          Rockets
-        </a>
-      </li>
-      <li>
-        <a
-          className=""
-          href="/missions"
-          onClick={[Function]}
-        >
-          Missions
-        </a>
-      </li>
-      <div
-        className="vertical-line"
+    <p>
+      Weather and Air Pollution
+    </p>
+    <div
+      className="left"
+    >
+      <i
+        className="fa-solid fa-microphone"
       />
-      <li>
-        <a
-          className=""
-          href="/my-profile"
-          onClick={[Function]}
-        >
-          My Profile
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
+      <i
+        className="fa-solid fa-gear"
+      />
+    </div>
+  </div>,
+  <div
+    className="cards"
+    data-testid="momo-id"
+  >
+    <div
+      className="search"
+    >
+      <i
+        className="fa-solid fa-magnifying-glass"
+      />
+      <input
+        onKeyUp={[Function]}
+        placeholder="search using country, city"
+        type="text"
+      />
+    </div>
+    <p>
+      there is no country has this name please enter a valid country name
+    </p>
+  </div>,
+]
 `;

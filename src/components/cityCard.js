@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchFilteredCaptialCity } from '../redux/cities/cities';
 import altImg from './images/not_available.jpg';
-import './rocketCards.css';
 
 const CityCard = (props) => {
   const {
