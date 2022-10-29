@@ -28,6 +28,8 @@ const Cities = () => {
           shownData = savedData.map((element) => (
             {
               country: element.country,
+              iso2: element.iso2,
+              iso3: element.iso3,
               cities: element.cities.filter(
                 (element) => element.trim().toLowerCase().startsWith(city.trim()),
               ),
