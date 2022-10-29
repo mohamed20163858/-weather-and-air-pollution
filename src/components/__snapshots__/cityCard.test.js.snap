@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<a
+  className="city-card dark"
+  data-testid="check-id"
+  href="/EG/Cairo"
+  onClick={[Function]}
+>
+  <div
+    id={1}
+  >
+    <img
+      alt="Egypt flag"
+      src="not_available.jpg"
+    />
+    <p>
+      Country: Egypt
+    </p>
+    <p>
+      City: Cairo
+    </p>
+  </div>
+</a>
+`;

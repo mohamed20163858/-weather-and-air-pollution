@@ -1,0 +1,124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="city-info"
+>
+  <div
+    className="flag"
+  >
+    <h1>
+      Country Flag
+    </h1>
+    <img
+      alt="flag"
+      src="not_available.jpg"
+      width="40"
+    />
+  </div>
+  <div
+    className="city-positions-details"
+  >
+    <p>
+      Country: 
+    </p>
+    <p>
+      City: 
+    </p>
+    <p>
+      Latitude: 0
+      <sup>
+        o
+      </sup>
+    </p>
+    <p>
+      Longitude: 0
+      <sup>
+        o
+      </sup>
+    </p>
+  </div>
+  <div
+    className="weather-analytics"
+  >
+    <h2>
+      Current Weather Analytics
+    </h2>
+    <p>
+      Weather condition: undefined
+    </p>
+    <p>
+      Humidity: undefined %
+    </p>
+    <p>
+      Temperature: undefined
+      <sup>
+        o
+      </sup>
+      C
+    </p>
+    <p>
+      Feels like: undefined
+      <sup>
+        o
+      </sup>
+      C
+    </p>
+    <p>
+      Cloudness: undefined %
+    </p>
+    <p>
+      Wind speed: undefined m/s
+    </p>
+    <p>
+      Wind degree: undefined
+      <sup>
+        o
+      </sup>
+    </p>
+    <p>
+      Wind gust speed: undefined m/s
+    </p>
+  </div>
+  <div
+    className="air-pollution-analytics"
+  >
+    <h2>
+      Current Air Pollution Analytics
+    </h2>
+    <p>
+      Pollution level: undefined
+    </p>
+    <p>
+      Pollution index: undefined
+    </p>
+    <h3>
+      Concentartions
+    </h3>
+    <p>
+      Carbon monoxide (CO): undefined ug/m3
+    </p>
+    <p>
+      Nitrogen monoxide (NO): undefined ug/m3
+    </p>
+    <p>
+      Nitrogen dioxide (NO2): undefined ug/m3
+    </p>
+    <p>
+      Ozone (O3): undefined ug/m3
+    </p>
+    <p>
+      Sulphur dioxide (SO2): undefined ug/m3
+    </p>
+    <p>
+      Ammonia (NH3): undefined ug/m3
+    </p>
+    <p>
+      Airbrone particles (PM2.5): undefined ug/m3
+    </p>
+    <p>
+      Airbrone particles (PM10): undefined ug/m3
+    </p>
+  </div>
+</div>
+`;

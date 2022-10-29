@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <div
+    className="navbar"
+  >
+    <a
+      aria-current="page"
+      className="logo active"
+      data-testid="nav-test-id"
+      href="/"
+      onClick={[Function]}
+    >
+      <i
+        className="fa-solid fa-house-user"
+      />
+    </a>
+    <p>
+      Weather and Air Pollution
+    </p>
+    <div
+      className="left"
+    >
+      <i
+        className="fa-solid fa-microphone"
+      />
+      <i
+        className="fa-solid fa-gear"
+      />
+    </div>
+  </div>,
+  <div
+    className="cards"
+    data-testid="momo-id"
+  >
+    <div
+      className="search"
+    >
+      <i
+        className="fa-solid fa-magnifying-glass"
+      />
+      <input
+        onKeyUp={[Function]}
+        placeholder="search using country, city"
+        type="text"
+      />
+    </div>
+    <p>
+      there is no country has this name please enter a valid country name
+    </p>
+  </div>,
+]
+`;
